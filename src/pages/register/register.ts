@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 
+import { LoginPage } from '../login/login';
+import { VerificationPage } from '../verification/verification';
+
 /**
  * Generated class for the RegisterPage page.
  *
@@ -15,18 +18,13 @@ import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
 })
 export class RegisterPage {
 
-  // ngAfterViewInit();
   constructor(private app: App, public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  // ngAfterViewInit() {
-  //     // let tabs = document.querySelectorAll('.show-tabbar');
-  //     // if (tabs !== null) {
-  //     //     Object.keys(tabs).map((key) => {
-  //     //         tabs[key].style.display = 'none';
-  //     //     });
-  //     // }
-  // }
+  goToVerif(){
+    this.app.getRootNav().push(VerificationPage);
+
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RegisterPage');

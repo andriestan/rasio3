@@ -17,11 +17,26 @@
 
 <ion-content padding>
 
-  <ion-item class="notifitem">
-    <br><br>
-    You are not logged in yet.
-    <br><br><br>
-    <button ion-button class="notifbtn clickbtn" (click)="goToLoginFromProfile()"><span class="walktextbtn">Login</span></button>
-  </ion-item>
+  <div [ngSwitch]="halamanProfile">
+    <ion-list *ngSwitchCase="'notlogin'">
+      <ion-item class="notifitem">
+        <img class="notifnoicon" src="../assets/icon/ic_noprofile.png" />
+        <br><br>
+        You are not logged in yet.
+        <br><br><br>
+        <button ion-button class="notifbtn clickbtn" (click)="goToLogin()"><span class="walktextbtn">Login</span></button>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'login'">
+      <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="ios-refresh"
+          refreshingSpinner="crescent">
+        </ion-refresher-content>
+      </ion-refresher>
+     Logged in!
+    </ion-list>
+  </div>
 
 </ion-content>

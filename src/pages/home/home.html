@@ -3,7 +3,7 @@
   <ion-navbar class="header0">
     <br><br>
     <span class="header1">
-      IDR 15,000,000
+      IDR 0
     </span><br />
     <span class="header2">
       UPCOMING BILLING
@@ -26,19 +26,19 @@
 
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content
-      pullingIcon="arrow-dropdown"
-      pullingText="Pull to refresh"
-      refreshingSpinner="circles"
-      refreshingText="Waiting for miracle...">
+      pullingIcon="ios-refresh"
+      refreshingSpinner="crescent">
     </ion-refresher-content>
   </ion-refresher>
 
   <div [ngSwitch]="whichPage">
     <ion-list *ngSwitchCase="'reminder'">
-     Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>
-     Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>
-     Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>
-     Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>
+      <ion-item class="notifitem">
+        <br>
+        You have no reminder yet.
+        <!-- <br><br><br> -->
+        <!-- <button ion-button class="notifbtn clickbtn" (click)="goToLogin()">Login</button> -->
+      </ion-item>
     </ion-list>
     <ion-list *ngSwitchCase="'calendar'">
      Calendar

@@ -19,9 +19,10 @@ import { LoginPage } from '../login/login';
 export class ProfilePage {
 
   constructor(private app: App, public navCtrl: NavController, public navParams: NavParams) {
+    this.halamanProfile = 'notlogin';
   }
 
-  goToLoginFromProfile(){
+  goToLogin(){
     // this.storage.set('pageShown', 'login');
   this.app.getRootNav().push(LoginPage);
   }

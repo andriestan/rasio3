@@ -11,12 +11,32 @@
     <ion-title><span class="headertext">Add your billing</span></ion-title>
   </ion-navbar>
   <ion-navbar class="header0">
-    <input class="addsearch" type="text" name="searchbilling" placeholder="Search your billing here" />
+    <ion-searchbar class="paysearch" placeholder="Search your billing" (ionInput)="getItems($event)"></ion-searchbar>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="ios-refresh"
+      refreshingSpinner="crescent">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list *ngFor="let group of items" class="addlist">
+    <br>
+    <ion-list-header color="light">
+        {{ group.type }}
+    </ion-list-header>
+    <ion-item *ngFor="let pay of group.processor">
+      <ion-avatar item-start>
+        <img src="../assets/imgs/{{ pay.img }}.png">
+      </ion-avatar>
+      {{ pay.title }}
+    </ion-item>
+  </ion-list>
 
 </ion-content>

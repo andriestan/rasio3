@@ -11,12 +11,45 @@
     <ion-title><span class="headertext">Payment</span></ion-title>
   </ion-navbar>
   <ion-navbar class="header0">
-    <input class="paysearch" type="text" name="searchpayment" placeholder="Search your payment" />
+    <ion-searchbar class="paysearch"
+    placeholder="Search your payment"
+    (ionInput)="getItems($event)">
+    </ion-searchbar>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <div [ngSwitch]="halamanPay">
+    <ion-list *ngSwitchCase="'notlogin'">
+      <ion-item class="notifitem">
+        You have no payment processor(s).
+        <!-- <br><br><br> -->
+        <!-- <button ion-button class="notifbtn clickbtn" (click)="goToLogin()">Login</button> -->
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'login'">
+
+      <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="ios-refresh"
+          refreshingSpinner="crescent">
+        </ion-refresher-content>
+      </ion-refresher>
+
+      <ion-list *ngFor="let group of items">
+        <ion-item-divider color="light">
+            {{ group.date }}
+        </ion-item-divider>
+        <ion-item *ngFor="let event of group.events">{{ event.title }}</ion-item>
+      </ion-list>
+
+    </ion-list>
+  </div>
+
+
 
 </ion-content>
