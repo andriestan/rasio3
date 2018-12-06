@@ -1,16 +1,146 @@
-// http://ionicframework.com/docs/theming/
+/*****ANDRIES MULAI*****/
+/*TOOLBAR START*/
+*{
+  font-family: OpenSansRegular;
+}
+body{
+  background: url('../assets/imgs/splash_logo.png'), url('../assets/imgs/splash.jpg');
+  background-position: center, center;
+  background-size:30%, 100%;
+  background-repeat: no-repeat, no-repeat;
+}
 
+.tabbar{
+  background: #fff !important;
+}
+.pertab{
+  color:#a8a8a8;
+}
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+.ion-md-add{
+  padding:5px 11px 5px 12px;
+  border-radius: 100px;
+  background:#ea0000;
+  box-shadow: -3px 3px 10px -4px rgba(234,0,0,1);
+  color:#fff !important;
+  font-size:35px !important;
+}
+.tab-button-text{
+  font-size:10px !important;
+  margin-top:0px !important;
+}
+.tabs-md .tab-button[aria-selected=true] .icon, .tabs-md .tab-button[aria-selected=true]{
+  color:#ff4f51 ;
+}
+
+.toolbar-background{
+  display:none !important;
+}
+
+.header{
+  background: linear-gradient(to bottom right, #fd9f95, #fb5085) !important;
+  color: #ffffff;
+  font-family: OpenSansRegular;
+}
+.headerhome{
+  height: 200px;
+}
+.tab-item-active{
+  background:green;
+}
+/*TOOLBAR SELESAI */
+
+/*CONTENT START*/
+.ioncontent{
+  font-family: OpenSansRegular;
+  background:#f7f7f7 !important;
+  color:#282828 !important;
+}
+
+.tab-selected{
+  color:#ff5050 !important;
+}
+
+.headertext{
+  color:#fff;
+  font-weight: bold;
+}
+/*CONTENT SELESAI*/
+
+/*ICON START */
+.tabs i.icon.ion-ios-camera {
+  height: inherit;
+  background-color: #ff5b38;
+  border-radius: 100em;
+}
+
+.tabs i.icon.ion-ios-camera:before {
+  color: white;
+}
+
+.ion-ios-ic_logo, .ion-md-ic_logo {
+  content: url(../assets/icon/ic_logo_sel.svg);
+  width: 10px !important;
+}
+.ion-md-ic_logo[ng-reflect-is-active=false]{
+  content: url(../assets/icon/ic_logo_dark.svg);
+}
+
+.ion-ios-ic_pay, .ion-md-ic_pay {
+  content: url(../assets/icon/ic_pay_sel.svg);
+  width: 10px !important;
+}
+.ion-md-ic_pay[ng-reflect-is-active=false]{
+  content: url(../assets/icon/ic_pay.svg);
+}
+
+.ion-ios-ic_notif, .ion-md-ic_notif {
+  content: url(../assets/icon/ic_notif_sel.svg);
+  width: 10px !important;
+}
+.ion-md-ic_notif[ng-reflect-is-active=false]{
+  content: url(../assets/icon/ic_notif.svg);
+}
+
+.ion-ios-ic_profile, .ion-md-ic_profile {
+  content: url(../assets/icon/ic_profile_sel.svg);
+  width: 10px !important;
+}
+.ion-md-ic_profile[ng-reflect-is-active=false]{
+  content: url(../assets/icon/ic_profile.svg);
+}
+/* ICON SELESAI */
+
+/*SEGMENT MULAI*/
+.segment-button{
+  border-bottom-style: none !important;
+  background:rgba(255,255,255,0.3) !important;
+  border-radius: 100px;
+  margin: 10px;
+  color:#fff !important;
+
+  &.activated, &.segment-activated {
+     border-left: 0;
+     color: #fd79ab !important;
+     background: #fff !important;
+   }
+}
+
+/*SEGMENT SELESAI */
+
+/*BUTTON START*/
+.clickbtn{
+  border:0 !important;
+  padding:10px !important;
+  border-radius: 100px !important;
+  width:70% !important;
+  height:auto !important;
+  margin-left: 15% !important;
+  margin-right: 15% !important;
+  box-shadow: -1px 2px 4px rgba(0,0,0,0.5);
+  text-transform: capitalize;
+  font-weight: 900;
+}
+/*BUTTON END*/
+
+/*****ANDRIES SELESAI******/

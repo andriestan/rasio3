@@ -1,0 +1,42 @@
+page-walkthrough {
+
+}
+
+.walkback{
+  background: linear-gradient(to bottom right, #fd9f95, #fb5085) !important;
+  text-align: center;
+}
+
+.walkslide{
+  height:80%;
+}
+
+.walkimg{
+  margin-left: 10% !important;
+  margin-right: 10% !important;
+  width: 80% !important;
+}
+
+.swiper-pagination-bullet {
+  background: white !important;
+}
+
+.walktext{
+  font-family: OpenSansRegular !important;
+  color:#FFF !important;
+  font-size:15px;
+}
+
+.walkbtn{
+  background:#fff !important;
+  color: #e22d4e !important;
+  width:80% !important;
+  border-radius: 100px;
+  font-size:15px;
+
+}
+
+.walktextbtn{
+  font-family: OpenSansBold !important;
+  text-transform: capitalize;
+}

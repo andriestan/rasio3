@@ -34,11 +34,13 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
+  primary:    #ea0000,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  white:      #FFFFFF,
+  pinktua:    #e22d4e,
 );
 
 
@@ -86,3 +88,57 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+
+
+
+/*FONT START*/
+@font-face {
+  font-family: OpenSansBold;
+  src: url("../assets/fonts/OpenSans-Bold.ttf")
+}
+@font-face {
+  font-family: OpenSansBoldItalic;
+  src: url("../assets/fonts/OpenSans-BoldItalic.ttf")
+}
+@font-face {
+  font-family: OpenSansCondLight;
+  src: url("../assets/fonts/OpenSans-CondLight.ttf")
+}
+@font-face {
+  font-family: OpenSansCondLightItalic;
+  src: url("../assets/fonts/OpenSans-CondLightItalic.ttf")
+}
+@font-face {
+  font-family: OpenSansExtraBold;
+  src: url("../assets/fonts/OpenSans-ExtraBold.ttf")
+}
+@font-face {
+  font-family: OpenSansExtraBoldItalic;
+  src: url("../assets/fonts/OpenSans-ExtraBoldItalic.ttf")
+}
+@font-face {
+  font-family: OpenSansItalic;
+  src: url("../assets/fonts/OpenSans-Italic.ttf")
+}
+@font-face {
+  font-family: OpenSansLight;
+  src: url("../assets/fonts/OpenSans-Light.ttf")
+}
+@font-face {
+  font-family: OpenSansLightItalic;
+  src: url("../assets/fonts/OpenSans-LightItalic.ttf")
+}
+@font-face {
+  font-family: OpenSansRegular;
+  src: url("../assets/fonts/OpenSans-Regular.ttf")
+}
+@font-face {
+  font-family: OpenSansSemiBold;
+  src: url("../assets/fonts/OpenSans-Semibold.ttf")
+}
+@font-face {
+  font-family: OpenSansSemiBoldItalic;
+  src: url("../assets/fonts/OpenSans-SemiboldItalic.ttf")
+}
+/*FONT SELESAI*/

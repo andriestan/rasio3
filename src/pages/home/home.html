@@ -1,17 +1,47 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
+<ion-header class="headerhome">
+
+  <ion-navbar class="header0">
+    <br><br>
+    <span class="header1">
+      IDR 15,000,000
+    </span><br />
+    <span class="header2">
+      UPCOMING BILLING
+    </span>
   </ion-navbar>
+
+  <ion-toolbar padding style="padding-left:30px; padding-right:30px;">
+    <ion-segment [(ngModel)]="whichPage" color="white">
+      <ion-segment-button value="reminder">
+        <ion-icon name="list" class="iconkecil"></ion-icon><span class="tabkecil">&nbsp;REMINDER</span>
+      </ion-segment-button>
+      <ion-segment-button value="calendar">
+        <ion-icon name="calendar" class="iconkecil"></ion-icon><span class="tabkecil">&nbsp;CALENDAR</span>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding class="ioncontent">
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Waiting for miracle...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div [ngSwitch]="whichPage">
+    <ion-list *ngSwitchCase="'reminder'">
+     Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>
+     Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>
+     Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>
+     Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>Reminder<br>
+    </ion-list>
+    <ion-list *ngSwitchCase="'calendar'">
+     Calendar
+    </ion-list>
+  </div>
 </ion-content>
