@@ -17,9 +17,9 @@ import { LoginPage } from '../login/login';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
-
+  halamanProfile: string = 'notlogin';
   constructor(private app: App, public navCtrl: NavController, public navParams: NavParams) {
-    this.halamanProfile = 'notlogin';
+
   }
 
   goToLogin(){

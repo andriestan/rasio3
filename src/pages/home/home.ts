@@ -3,9 +3,10 @@ import { NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 export class HomePage {
+  whichPage: string = "reminder";
   doRefresh(refresher) {
     console.log('Begin async operation', refresher);
 
@@ -16,7 +17,6 @@ export class HomePage {
   }
 
   constructor(public navCtrl: NavController) {
-    this.whichPage = "reminder";
   }
 
 }

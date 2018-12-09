@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, App } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, App, AlertController } from 'ionic-angular';
 
 import { RegisterPage } from '../register/register';
 import { VerificationPage } from '../verification/verification';
@@ -19,7 +19,7 @@ import { VerificationPage } from '../verification/verification';
 export class LoginPage {
 
   // ngAfterViewInit();
-  constructor(private app: App, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private alertCtrl: AlertController, private app: App, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   // ngAfterViewInit() {
@@ -36,8 +36,13 @@ export class LoginPage {
   }
 
   goToVerif(){
-    this.app.getRootNav().push(VerificationPage);
-
+    // this.app.getRootNav().push(VerificationPage);
+      let alert = this.alertCtrl.create({
+        title: 'Forbidden',
+        subTitle: 'This apps is still on development',
+        buttons: ['Dismiss']
+      });
+      alert.present();
   }
 
   goToRegister(){

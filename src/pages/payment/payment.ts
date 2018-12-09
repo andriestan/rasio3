@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angu
   templateUrl: 'payment.html',
 })
 export class PaymentPage {
-
+  halamanPay: string = 'notlogin';
   doRefresh(refresher) {
     console.log('Begin async operation', refresher);
 
@@ -27,7 +27,6 @@ export class PaymentPage {
   searchQuery: string = '';
   items: any;
   constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
-    this.halamanPay = 'notlogin';
     this.initializeItems();
   }
 

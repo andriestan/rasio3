@@ -17,6 +17,7 @@ import { Storage } from '@ionic/storage';
   templateUrl: 'notifications.html',
 })
 export class NotificationsPage {
+  halamanNotif: string = 'notlogin';
 
   doRefresh(refresher) {
     console.log('Begin async operation', refresher);
@@ -28,7 +29,6 @@ export class NotificationsPage {
   }
 
   constructor(private app: App, public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
-    this.halamanNotif = 'notlogin';
   }
 
   goToLogin(){
