@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-
+import { IonicPage, NavController, NavParams, AlertController, App } from 'ionic-angular';
+import { LoginPage } from '../login/login';
 /**
  * Generated class for the AddPage page.
  *
@@ -24,9 +24,14 @@ export class AddPage {
     }, 2000);
   }
 
+  goToLogin(){
+    // this.storage.set('pageShown', 'login');
+  this.app.getRootNav().push(LoginPage);
+  }
+
   searchQuery: string = '';
   items: any;
-  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private app: App, private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
     this.initializeItems();
   }
 

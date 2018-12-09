@@ -22,7 +22,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding class="ioncontent">
+<ion-content class="ioncontent">
 
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content
@@ -41,7 +41,15 @@
       </ion-item>
     </ion-list>
     <ion-list *ngSwitchCase="'calendar'">
-     Calendar
+      <ion-item padding>
+        <ion-calendar #calendar lang="en"></ion-calendar>
+      </ion-item>
+      <ion-list class="addlist">
+        <br>
+        <ion-list-header color="light">
+            No reminder yet.
+        </ion-list-header>
+      </ion-list>
     </ion-list>
   </div>
 </ion-content>

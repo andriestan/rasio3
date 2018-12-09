@@ -31,7 +31,7 @@
     <ion-list-header color="light">
         {{ group.type }}
     </ion-list-header>
-    <ion-item *ngFor="let pay of group.processor">
+    <ion-item *ngFor="let pay of group.processor" (click)="goToLogin()">
       <ion-avatar item-start>
         <img src="../assets/imgs/{{ pay.img }}.png">
       </ion-avatar>
